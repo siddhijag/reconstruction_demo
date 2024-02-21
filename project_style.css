@@ -1,0 +1,208 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', 'sans-serif';
+    box-sizing: border-box;
+    scroll-behavior: none;
+    text-align: center;
+}
+.log-img {
+    float: left;
+    position: relative;
+    /* margin: 10px 15px 15px 10px; */
+    /* height: 100; */
+    width: 70px;
+    /* margin-top: -0.7%; */
+    display: block;
+    /* Other styles here */
+}
+.banner{
+    margin-top: 50px;
+}
+.navbar {
+    width: 100%;
+    background-color: #1d2026;
+    overflow: hidden;
+    position: fixed;
+    top:0;
+    min-height: 8vh;
+    align-items: center;
+    padding: 15px 5%;
+  }
+  
+  .navbar a {
+    display: block;
+    text-align: center;
+    float: right;
+    padding: 12px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 0px 20px;
+    letter-spacing: 1.5px;
+    /* font-weight: bold; */
+  }
+  .navbar #logo {
+    float: left;
+    color: white;
+    padding: 0px;
+  }
+  .navbar #logo:hover {
+    color: #fff;
+    font-size: 20px;    
+  }
+  .navbar a:hover {
+    color: #ff8c69;
+    font-size: 22px;
+    transition: all 0.4s ease 0s;
+    font-weight: bold;
+  }
+  
+  /* ---------------------------------------------------------------section */
+#logo{
+  list-style: none;
+  position: cursor;
+}
+.logo-section div{
+    /* background: red; */
+    padding-top: 10%;
+    height: 100vh;
+    align-items: center;
+    font-size: 50px;
+  }
+.logo-section div img{
+    width:  400px;
+    /* height: 500px; */
+}
+.logo-section div img:hover{
+    width:  450px;
+    transition: all 1s ease 0s;
+    /* transition: width 2s; */
+    /* height: 500px; */
+}
+
+
+.intro-section h2{
+  padding: 3% 0%;
+  font-size: 50px;
+}
+.intro-section div{
+  /* background: red; */
+  /* padding-top: 10%; */
+  height: 150vh;
+  align-items: center;
+  font-size: 30px;
+}
+.intro-section div img{
+  /* width:  950px;
+  height: 500px; */
+  width:  70%;
+  height: auto;
+}
+.intro-section div img:hover{
+  /* width:  1050px;
+  height: 550px; */
+  width:  75%;
+  height: auto;
+  transition: all 1s ease 0s;
+  /* transition: width 2s; */
+  /* height: 500px; */
+}
+
+.info-section div{
+    /* background: red; */
+    padding-top: 10%;
+    height: 150vh;
+    align-items: center;
+    font-size: 30px;
+  }
+.info-section div img{
+    /* width:  950px;
+    height: 500px; */
+    width:  70%;
+    height: auto;
+}
+.info-section div img:hover{
+    /* width:  1050px;
+    height: 550px; */
+    width:  75%;
+    height: auto;
+    transition: all 1s ease 0s;
+    /* transition: width 2s; */
+    /* height: 500px; */
+}
+
+
+
+.train-section,
+.test-section,
+.loss-section{
+    padding-top: 4%;
+    height: 100vh;
+    align-items: center;
+}
+.train-section h2,
+.test-section h2,
+.loss-section h2{
+    padding: 3% 0%;
+    font-size: 50px;
+}
+.train-section .row .column img,
+.test-section .row .column img{
+    width: 600px;
+    height: 600px;
+}
+.train-section .row .column img:hover{
+    width: 650px;
+    height: 650px;
+    transition: all 1s ease 0s;
+    /* transition: width 2s; */
+    /* height: 500px; */
+}
+
+.test-section .row .column img:hover{
+  width: 650px;
+  height: 650px;
+  transition: all 1s ease 0s;
+  /* transition: width 2s; */
+  /* height: 500px; */
+}
+
+
+.loss-section div{
+    /* background: red; */
+    height: 100vh;
+    align-items: center;
+  }
+.loss-section div img{
+    width:  900px;
+    height: 600px;
+}
+
+.row {
+    display: flex;
+}
+
+.column {
+    float: left;
+    width: 70%;
+    /* padding: 5px; */
+}
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+@media screen and (max-width: 500px) {
+    .navbar a {
+      float: none;
+      display: block;
+    }
+    .column {
+        width: 100%;
+    }
+  }
+

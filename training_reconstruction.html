@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Reconstruction Demo</title>
+    <link rel = "icon" href = "./iisc_logo.jpg" type = "image/x-icon">
+    <link rel="stylesheet", href="project_style.css">
+</head>
+
+<!-- <style>
+    .test-section {
+        margin-bottom: 200px;
+    }
+</style> -->
+
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <a href="#architecture">Architecture</a> 
+            <a href="#test">Results</a> 
+            <a href="#diff">Diffusion</a> 
+            <a href="#introduction">Introduction</a> 
+            <a class="active" id="logo" href="#logoPage">
+                <img class="log-img" src="./iisc_logo.jpg">
+            </a>
+            <a class="active" id="logo" href="#logoPage">
+                <img class="log-img" src="./cns logo.png">
+            </a>
+            <a class="active" id="logo" href="#logoPage">
+                <img class="log-img" src="./qr code cns.png">
+            </a>
+        </nav>
+        <div class="banner">
+        <section class="logo-section" id="logoPage">
+            <div>
+                <br>
+                <h1>Reconstruction of Visual stimuli using Brain Activity</h1> 
+                <!-- <img src=".\cns logo.png"> -->
+            </div>
+        </section>
+        <!-- </div> -->
+
+        <div style="margin-top: -100px;"></div>
+
+        <section class="intro-section" id="introduction">
+            <h2>What is Reconstruction?</h2>
+            <div>
+                <figure>
+                    <img src=".\intro_hobbes.png" alt="Introduction">
+                    <figcaption>Reconstructing Images: Transforming fMRI Data into Images through AI Decoding</figcaption>
+                </figure>
+                <!-- <img src=".\intro_hobbes.png"> -->
+            </div>
+        </section>
+
+        <div style="margin-top: -500px;"></div>
+
+        <!-- <section class="train-section" id="train">
+            <h2>Reconstruction of Training images from fMRI recordings</h2>
+            <div class="row">
+                <div class="column">
+                    <img src=".\train_recon_gif.gif">
+                </div>
+                <div class="column">
+                    <img src=".\train_ep_140.jpg">
+                </div>
+            </div>
+        </section> -->
+
+        <!-- Water droplet in beaker gif -->
+        <section class="intro-section" id="diff">
+            <h2>What is Diffusion?</h2>
+            <div class="row">
+                <div class="column">
+                    <figure>
+                        <img src=".\water drops in beaker.gif" style="margin-right: -100px;">
+                        <figcaption style="font-weight: bold;">Forward Process</figcaption>
+                        <figcaption>Ink droplets change the colour of the water in the beaker little by little.</figcaption>
+                    </figure>
+                    <!-- <img src=".\water drops in beaker.gif" style="margin-right: -100px;"> -->
+                </div>
+                <div class="column">
+                    <figure>
+                        <img src=".\water reverse.gif" style="margin-left: -100px;">
+                        <figcaption style="font-weight: bold;">Reverse Process</figcaption>
+                        <figcaption>Need to change the mixture back to clear water through a reverse process.</figcaption>
+                    </figure>
+                    <!-- <img src=".\water reverse.gif" style="margin-left: -100px;"> -->
+                </div>
+            </div>
+
+            <div>
+                <figure>
+                    <img src=".\diffusion_dog_noise.png" style="margin-top: -500px;">
+                    <figcaption style="font-weight: bold;">Forward Diffusion</figcaption>
+                    <figcaption>Adding noise to the image iteratively for several steps gets us a completely noisy image.</figcaption>
+                </figure>
+                <!-- <img src=".\diffusion_dog_noise.png" style="margin-top: -500px;"> -->
+            </div>
+        </section>
+
+        <section class="test-section" id="test" style="margin-top: -1000px;">
+            <h2>Reconstruction of Test images from fMRI recordings</h2>
+            <div class="row">
+                <div class="column">
+                    <figure>
+                        <img src=".\final_grid_gif_small.gif" alt="Gif Results">
+                        <figcaption style="font-size: 30px;">The actual test images vs the reconstructions over 37 diffusion steps.</figcaption>
+                    </figure>
+                    <!-- <img src=".\final_grid_gif_small.gif"> -->
+                </div>
+                <div class="column">
+                    <figure>
+                        <img src=".\final_grid_static.gif" alt="Static Results">
+                        <figcaption style="font-size: 30px;">The actual test images vs the final reconstructions.</figcaption>
+                    </figure>
+                    <!-- <img src=".\test_ep_140.jpg"> -->
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <section class="info-section" id="architecture">
+            <!-- <div>
+                <br>
+                <h2>Architecture - Stage 1</h2> 
+                <br>
+                <img src=".\stage_1_training (1).png">
+                <br>
+                <img src=".\stage_1_testing (1).png">
+            </div> -->
+
+            <!-- <div style="margin-top: 10px;"></div> -->
+            
+            <div>
+                <br>
+                <h2>Architecture - Stage 1</h2>
+                <p>Reconstruction of Images via VDVAE (first stage) after applying CCA transformation.</p>
+                <br>
+                <div style="display: flex; justify-content: space-around; margin-top: -200px;">
+                    <div>
+                        <h3>Training Stage</h3>
+                        <figure>
+                            <img src="./stage_1_training (2).png" alt="Training Stage">
+                            <figcaption>The CCA model transforms the train fMRI of the primary subject, which is then used to train the Ridge Regressor.</figcaption>
+                        </figure>
+                        <!-- <img src="./stage_1_training (1).png"> -->
+                        <!-- <img src="./stage_1_training (1).png" style="width: 60%; height: auto;"> -->
+                    </div>
+                    <div>
+                        <h3>Testing Stage</h3>
+                        <figure>
+                            <img src="./stage_1_testing (2).png" alt="Testing Stage">
+                            <figcaption>The CCA-transformed test fMRI (primary/secondary) is input to the regressor to obtain predicted latents.</figcaption>
+                        </figure>
+                        <!-- <img src="./stage_1_testing (1).png"> -->
+                    </div>
+                </div>
+            </div>
+            
+
+            <div style="margin-top: -200px; margin-bottom: 800px;">
+                <br>
+                <h2>Architecture - Stage 2</h2>
+                <p>Final Reconstruction of Images via Versatile Diffusion (second stage) after applying CCA transformation.</p>
+                <br>
+                <h3>Training Stage</h3>
+                <figure>
+                    <img src="./stage_2_training (2).png" alt="Training Stage">
+                    <figcaption>First, the fMRI is transformed using the CCA model, and then the regressor weights from fMRI to Clip features are learnt using the transformed fMRI.</figcaption>
+                </figure>
+                <!-- <img src=".\stage_2_training (2).png"> -->
+                <br><br><br>
+                <h3>Testing Stage</h3>
+                <figure>
+                    <img src="./stage_2_testing (2).png" alt="Testing Stage">
+                    <figcaption>The test fMRI of either subject is used to obtain predicted features, which, in turn, are used by the VD model to generate the reconstructed image.</figcaption>
+                </figure>
+                <!-- <img src=".\stage_2_testing (2).png"> -->
+            </div>
+        </section>
+
+
+        </div>
+    </div>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <link rel="stylesheet" href="project_style.css">
+        <script src="project_script.js"></script> -->
