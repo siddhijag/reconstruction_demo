@@ -15,12 +15,8 @@
 </style> -->
 
 <body>
-    <div class="container">
-        <nav class="navbar">
-            <a href="#architecture">Architecture</a> 
-            <a href="#test">Results</a> 
-            <a href="#diff">Diffusion</a> 
-            <a href="#introduction">Introduction</a> 
+    <nav class="navbar">
+        <div class="nav-logos">
             <a class="active" id="logo" href="#logoPage">
                 <img class="log-img" src="./iisc_logo.jpg">
             </a>
@@ -30,18 +26,28 @@
             <a class="active" id="logo" href="#logoPage">
                 <img class="log-img" src="./qr code cns.png">
             </a>
-        </nav>
+        </div>
+        <div class="nav-links">
+            <a href="#architecture">Architecture</a> 
+            <a href="#test">Results</a> 
+            <a href="#diff">Diffusion</a> 
+            <a href="#introduction">Introduction</a> 
+        </div>
+    </nav>
+    <div class="container">
+
         <div class="banner">
         <section class="logo-section" id="logoPage">
             <div>
                 <br>
-                <h1>Reconstruction of Visual stimuli using Brain Activity</h1> 
+                <h1>Reconstruction of Visual stimuli</h1> 
+                <h1>using Brain Activity</h1>
                 <!-- <img src=".\cns logo.png"> -->
             </div>
         </section>
         <!-- </div> -->
 
-        <div style="margin-top: -100px;"></div>
+        <!-- <div style="margin-top: -100px;"></div> -->
 
         <section class="intro-section" id="introduction">
             <h2>What is Reconstruction?</h2>
@@ -54,7 +60,7 @@
             </div>
         </section>
 
-        <div style="margin-top: -500px;"></div>
+        <!-- <div style="margin-top: -500px;"></div> -->
 
         <!-- <section class="train-section" id="train">
             <h2>Reconstruction of Training images from fMRI recordings</h2>
@@ -71,7 +77,7 @@
         <!-- Water droplet in beaker gif -->
         <section class="intro-section" id="diff">
             <h2>What is Diffusion?</h2>
-            <div class="row">
+            <div class="row diffusion-container">
                 <div class="column">
                     <figure>
                         <img src=".\water drops in beaker.gif" style="margin-right: -100px;">
@@ -90,9 +96,9 @@
                 </div>
             </div>
 
-            <div>
+            <div class="dog-forward">
                 <figure>
-                    <img src=".\diffusion_dog_noise.png" style="margin-top: -500px;">
+                    <img src=".\diffusion_dog_noise.png">
                     <figcaption style="font-weight: bold;">Forward Diffusion</figcaption>
                     <figcaption>Adding noise to the image iteratively for several steps gets us a completely noisy image.</figcaption>
                 </figure>
@@ -100,7 +106,7 @@
             </div>
         </section>
 
-        <section class="test-section" id="test" style="margin-top: -1000px;">
+        <section class="test-section" id="test">
             <h2>Reconstruction of Test images from fMRI recordings</h2>
             <div class="row">
                 <div class="column">
@@ -140,7 +146,7 @@
                 <h2>Architecture - Stage 1</h2>
                 <p>Reconstruction of Images via VDVAE (first stage) after applying CCA transformation.</p>
                 <br>
-                <div style="display: flex; justify-content: space-around; margin-top: -200px;">
+                <div style="display: flex; justify-content: space-around;">
                     <div>
                         <h3>Training Stage</h3>
                         <figure>
@@ -162,7 +168,7 @@
             </div>
             
 
-            <div style="margin-top: -200px; margin-bottom: 800px;">
+            <div class="arch-stage-2">
                 <br>
                 <h2>Architecture - Stage 2</h2>
                 <p>Final Reconstruction of Images via Versatile Diffusion (second stage) after applying CCA transformation.</p>
@@ -170,14 +176,14 @@
                 <h3>Training Stage</h3>
                 <figure>
                     <img src="./stage_2_training (2).png" alt="Training Stage">
-                    <figcaption>First, the fMRI is transformed using the CCA model, and then the regressor weights from fMRI to Clip features are learnt using the transformed fMRI.</figcaption>
+                    <figcaption class="caption-padding">First, the fMRI is transformed using the CCA model, and then the regressor weights from fMRI to Clip features are learnt using the transformed fMRI.</figcaption>
                 </figure>
                 <!-- <img src=".\stage_2_training (2).png"> -->
                 <br><br><br>
                 <h3>Testing Stage</h3>
                 <figure>
                     <img src="./stage_2_testing (2).png" alt="Testing Stage">
-                    <figcaption>The test fMRI of either subject is used to obtain predicted features, which, in turn, are used by the VD model to generate the reconstructed image.</figcaption>
+                    <figcaption class="caption-padding">The test fMRI of either subject is used to obtain predicted features, which, in turn, are used by the VD model to generate the reconstructed image.</figcaption>
                 </figure>
                 <!-- <img src=".\stage_2_testing (2).png"> -->
             </div>

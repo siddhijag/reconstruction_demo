@@ -19,9 +19,30 @@
 .banner{
     margin-top: 50px;
 }
+
+.navbar {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links {
+  /* margin-left: auto; */
+}
+
+.nav-logos {
+  /* margin-left: auto; */
+  margin-right: auto;
+}
+
+.caption-padding {
+  padding: 0 5rem 0 5rem;
+}
+
 .navbar {
     width: 100%;
     background-color: #1d2026;
+    color: black;
+    /* background-color: white; */
     overflow: hidden;
     position: fixed;
     top:0;
@@ -66,8 +87,8 @@
 }
 .logo-section div{
     /* background: red; */
-    padding-top: 10%;
-    height: 100vh;
+    padding-top: 5%;
+    /* height: 100vh; */
     align-items: center;
     font-size: 50px;
   }
@@ -82,15 +103,29 @@
     /* height: 500px; */
 }
 
+.diffusion-container {
+  position: relative;
+  margin-top: -7rem;
+  z-index: -5;
+}
+
+.dog-forward {
+  margin-top: 5rem;
+}
+
+#architecture {
+  margin-top: 5rem;
+}
 
 .intro-section h2{
+  margin: 5% 0 0 0;
   padding: 3% 0%;
   font-size: 50px;
 }
 .intro-section div{
   /* background: red; */
   /* padding-top: 10%; */
-  height: 150vh;
+  /* height: 150vh; */
   align-items: center;
   font-size: 30px;
 }
@@ -112,8 +147,8 @@
 
 .info-section div{
     /* background: red; */
-    padding-top: 10%;
-    height: 150vh;
+    /* padding-top: 10%; */
+    /* height: 150vh; */
     align-items: center;
     font-size: 30px;
   }
@@ -133,13 +168,20 @@
     /* height: 500px; */
 }
 
+.arch-stage-2 {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
 
+.container {
+  padding: 0 5% 0 5%;
+}
 
 .train-section,
 .test-section,
 .loss-section{
     padding-top: 4%;
-    height: 100vh;
+    /* height: 100vh; */
     align-items: center;
 }
 .train-section h2,
