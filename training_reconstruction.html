@@ -47,7 +47,6 @@
         </section>
         <!-- </div> -->
 
-        <!-- <div style="margin-top: -100px;"></div> -->
 
         <section class="intro-section" id="introduction">
             <h2>What is Reconstruction?</h2>
@@ -56,7 +55,6 @@
                     <img src=".\intro_hobbes.png" alt="Introduction">
                     <figcaption>Reconstructing Images: Transforming fMRI Data into Images through AI Decoding</figcaption>
                 </figure>
-                <!-- <img src=".\intro_hobbes.png"> -->
             </div>
         </section>
 
@@ -87,7 +85,6 @@
                         <figcaption style="font-weight: bold;">Forward Process</figcaption>
                         <figcaption>Ink droplets change the colour of the water in the beaker little by little.</figcaption>
                     </figure>
-                    <!-- <img src=".\water drops in beaker.gif" style="margin-right: -100px;"> -->
                 </div>
                 <!-- <div class="long-arrow-right"></div> -->
                 <div>
@@ -109,7 +106,6 @@
                     <figcaption style="font-weight: bold;">Forward Diffusion</figcaption>
                     <figcaption>Adding noise to the image iteratively for several steps gets us a completely noisy image.</figcaption>
                 </figure>
-                <!-- <img src=".\diffusion_dog_noise.png" style="margin-top: -500px;"> -->
             </div>
         </section>
 
@@ -121,33 +117,18 @@
                         <img src=".\final_grid_gif_small.gif" alt="Gif Results">
                         <figcaption style="font-size: 30px;">The actual test images vs the reconstructions over 37 diffusion steps.</figcaption>
                     </figure>
-                    <!-- <img src=".\final_grid_gif_small.gif"> -->
                 </div>
                 <div class="column">
                     <figure>
                         <img src=".\final_grid_static.gif" alt="Static Results">
                         <figcaption style="font-size: 30px;">The actual test images vs the final reconstructions.</figcaption>
                     </figure>
-                    <!-- <img src=".\test_ep_140.jpg"> -->
                 </div>
             </div>
         </section>
 
 
-
-
         <section class="info-section" id="architecture">
-            <!-- <div>
-                <br>
-                <h2>Architecture - Stage 1</h2> 
-                <br>
-                <img src=".\stage_1_training (1).png">
-                <br>
-                <img src=".\stage_1_testing (1).png">
-            </div> -->
-
-            <!-- <div style="margin-top: 10px;"></div> -->
-            
             <div>
                 <br>
                 <h2>Architecture - Stage 1</h2>
@@ -160,8 +141,6 @@
                             <img src="./stage_1_training (2).png" alt="Training Stage">
                             <figcaption>The CCA model transforms the train fMRI of the primary subject, which is then used to train the Ridge Regressor.</figcaption>
                         </figure>
-                        <!-- <img src="./stage_1_training (1).png"> -->
-                        <!-- <img src="./stage_1_training (1).png" style="width: 60%; height: auto;"> -->
                     </div>
                     <div>
                         <h3>Testing Stage</h3>
@@ -169,7 +148,6 @@
                             <img src="./stage_1_testing (2).png" alt="Testing Stage">
                             <figcaption>The CCA-transformed test fMRI (primary/secondary) is input to the regressor to obtain predicted latents.</figcaption>
                         </figure>
-                        <!-- <img src="./stage_1_testing (1).png"> -->
                     </div>
                 </div>
             </div>
@@ -185,20 +163,25 @@
                     <img src="./stage_2_training (2).png" alt="Training Stage">
                     <figcaption class="caption-padding">First, the fMRI is transformed using the CCA model, and then the regressor weights from fMRI to Clip features are learnt using the transformed fMRI.</figcaption>
                 </figure>
-                <!-- <img src=".\stage_2_training (2).png"> -->
                 <br><br><br>
                 <h3>Testing Stage</h3>
                 <figure>
                     <img src="./stage_2_testing (2).png" alt="Testing Stage">
                     <figcaption class="caption-padding">The test fMRI of either subject is used to obtain predicted features, which, in turn, are used by the VD model to generate the reconstructed image.</figcaption>
                 </figure>
-                <!-- <img src=".\stage_2_testing (2).png"> -->
             </div>
         </section>
 
 
         </div>
     </div>
+
+    
+    <footer>
+        <p>
+            <a href="https://doi.org/10.1038/s41598-023-42891-8">Ozcelik, F., VanRullen, R. Natural scene reconstruction from fMRI signals using generative latent diffusion. Sci Rep 13, 15666 (2023).</a>
+        </p>
+      </footer>
 </body>
 
 </html>
